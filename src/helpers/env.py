@@ -1,4 +1,5 @@
 import pathlib
+
 from functools import lru_cache
 
 from decouple import Config, RepositoryEnv

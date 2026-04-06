@@ -18,9 +18,9 @@ def perform_completion(messages=[], client=None, raw=None):
     if not isinstance(client, OpenAI):
         client = get_openai_client()
     response = client.chat.completions.create(
-      model=OPENAI_COMPLETION_MODEL,
-      messages=messages,
-      response_format={ "type" : "json_object" }
+    model=OPENAI_COMPLETION_MODEL,
+    messages=messages,
+    response_format={ "type" : "json_object" }
     )
     if raw:
         return response
